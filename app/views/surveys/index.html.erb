@@ -1,18 +1,13 @@
 <div class="container">
   <div class="questionnaires_<%= action_name %>">
     <h1>
-      Delfy
-      </br>
-      </br>
+      
     </h1>
     <hr>
     <% if @surveys.empty? %>
       <p> There are no surveys </p>
     <% else %>
       <p>
-        Filter by type:
-        <%= render 'survey_label_all' %>
-        <%= render partial: 'survey_label', collection: get_survey_types.keys, as: :survey_type, locals: { with_badges: true } %>
       </p>
       <table class='table table-nonfluid survey-table'>
         <thead>
